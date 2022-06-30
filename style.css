@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.prevBtn {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 1;
+    padding: calc(50vh - 25px) 80px calc(50vh - 25px) 50px;
+    font-size: 50px;
+    color: black;
+    transition: 0.3s linear;
+}
+
+.slideContainer {
+    position: relative;
+    height: 100vh;
+}
+
+.slideImage {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.slideImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nextBtn {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 1;
+    padding: calc(50vh - 25px) 80px calc(50vh - 25px) 50px;
+    font-size: 50px;
+    color: black;
+    transition: 0.3s linear;
+}
+
+.prevBtn:hover, .nextBtn:hover {
+    color: white;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 89px -6px rgba(21, 21, 22, 1);
+    -moz-box-shadow: 0px 0px 89px -6px rgba(21, 21, 22, 1);
+    box-shadow: 0px 0px 89px -6px rgba(21, 21, 22, 1);
+}
+
+.navDots {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    left: calc(50vw - 100px);
+    bottom: 10px;
+}
+
+.single-dot {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50% ;
+    transition: 0.3s linear;
+}
+
+.single-dot:hover {
+    background-color: black;
+    box-shadow: 0 0 10px 10px;
+    box-shadow: 0px 0px 38px 0px rgba(255, 255, 255, 1);
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.single-dot.active {
+    background-color: black;
+    box-shadow: 0 0 10px 10px;
+    box-shadow: 0px 0px 38px 0px rgba(255, 255, 255, 1);
+    border: 1px solid white;
+}
+
